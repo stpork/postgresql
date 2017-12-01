@@ -50,8 +50,6 @@ RUN yum install -y centos-release-scl-rh \
 && /usr/libexec/fix-permissions $HOME \
 && /usr/libexec/fix-permissions /var/run/postgresql
 
-RUN set enforce 0 sestatus
-
 # Get prefix path and path to scripts rather than hard-code them in scripts
 ENV CONTAINER_SCRIPTS_PATH=/usr/share/container-scripts/postgresql \
     ENABLED_COLLECTIONS=rh-postgresql95
