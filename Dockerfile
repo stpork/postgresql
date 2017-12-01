@@ -49,7 +49,6 @@ RUN yum install -y centos-release-scl-rh \
 && mkdir -p $HOME/data \
 && /usr/libexec/fix-permissions $HOME \
 && /usr/libexec/fix-permissions /var/run/postgresql \
-&& chmod -R 700 $HOME \
 && chown -R 26 $HOME
 
 # Get prefix path and path to scripts rather than hard-code them in scripts

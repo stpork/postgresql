@@ -236,7 +236,7 @@ function set_pgdata ()
     popd
   fi
   # ensure sane perms for postgresql startup
-  # chmod 700 "$PGDATA"
+  chmod 700 "$PGDATA"
 }
 
 function wait_for_postgresql_master() {
