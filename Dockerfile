@@ -49,8 +49,7 @@ RUN yum install -y centos-release-scl-rh && \
     mkdir -p /var/lib/pgsql/data && \
     /usr/libexec/fix-permissions /var/lib/pgsql && \
     /usr/libexec/fix-permissions /var/run/postgresql \
-    chown -R 26 /var/lib/pgsql/data
-    
+    chmod -R 777 /var/lib/pgsql/data
 # Get prefix path and path to scripts rather than hard-code them in scripts
 ENV CONTAINER_SCRIPTS_PATH=/usr/share/container-scripts/postgresql \
     ENABLED_COLLECTIONS=rh-postgresql95
