@@ -67,7 +67,8 @@ VOLUME ["$HOME/data"]
 
 RUN chown -R nobody:nobody $HOME/data
 
-USER 26
+#USER 26
+USER root
 
 ENTRYPOINT ["container-entrypoint"]
 CMD ["run-postgresql"]
